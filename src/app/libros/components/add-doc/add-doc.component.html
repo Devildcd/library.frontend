@@ -1,0 +1,45 @@
+<div class="fondo animated fadeIn" [ngClass]="modalService.ocultoDoc">
+
+    <div class="modal" style="display: block;" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <!-- <div *ngIf="modalService.exitoDoc" class="alert alert-success d-flex align-items-center" role="alert">
+            <i class="fa fa-check-circle" aria-hidden="true"></i>
+            <div>
+              <span style="font-size: 20px; color: rgb(97, 214, 18);">Exito!!!!</span>
+            </div>
+          </div> -->
+
+          <div *ngIf="modalService.errorMensajeDoc" class="alert alert-danger d-flex align-items-center" role="alert">
+            <i class="fa fa-times-circle" aria-hidden="true"></i>
+            <div>
+              <span style="font-size: 20px; color: rgb(247, 62, 49);">{{ modalService.errorMensajeDoc }}</span>
+            </div>
+          </div>
+
+          <div *ngIf="modalService.validFileDoc" class="alert alert-danger d-flex align-items-center" role="alert">
+            <i class="fa fa-times-circle" aria-hidden="true"></i>
+            <div>
+              <span style="font-size: 20px; color: rgb(247, 62, 49);">{{modalService.validFileDoc}}</span>
+            </div>
+          </div>
+
+          <div class="modal-header">
+            <h1 class="modal-title">Anexar documento</h1>
+            <i class="fa fa-file" aria-hidden="true"></i>
+          </div>
+          <div class="modal-body text-center" >
+            <input type="file" accept=".txt, .pdf, .doc, .docx, .epub, .mobi, .rtf, .swf, .html, .azw" (change)="onFileSelected($event)">
+            <div *ngIf="modalService.previewDoc" style="margin-top: 5px;">
+            </div>
+            <input type="hidden" [value]="modalService.selectedLibroId$">
+          </div>
+          <div class="modal-footer">
+            <button type="button" (click)="modalService.ocultarModalDoc()" class="btn btn-secondary custom-button"><i class="fa fa-times" aria-hidden="true"></i></button>
+            <button type="button" (click)="saveDoc()" [disabled]="!modalService.previewDoc" class="btn btn-primary"><i class="fa fa-check" aria-hidden="true"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

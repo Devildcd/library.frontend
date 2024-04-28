@@ -1,0 +1,100 @@
+/*para la galeria de imagenes del moncada*/
+#portfolioSliderWithThumbs {
+    margin-top: 0;
+}
+
+#portfolioSliderWithThumbs #thumbGalleryDetail {
+    height: 600px;
+}
+
+#portfolioSliderWithThumbs #thumbGalleryDetail .owl-nav {
+    margin-top: 0;
+}
+
+#portfolioSliderWithThumbs #thumbGalleryDetail .owl-nav button.owl-prev,
+#portfolioSliderWithThumbs #thumbGalleryDetail .owl-nav button.owl-next {
+    border: 0 none;
+    border-radius: 0;
+    color: #FFF;
+    height: 80px;
+    line-height: 68px;
+    margin-top: -20px;
+    transition: all 0.3s ease;
+}
+
+#portfolioSliderWithThumbs #thumbGalleryDetail .owl-nav button.owl-prev:before,
+#portfolioSliderWithThumbs #thumbGalleryDetail .owl-nav button.owl-next:before {
+    font-family: simple-line-icons;
+    content: "\e605";
+    font-size: 11px;
+}
+
+#portfolioSliderWithThumbs #thumbGalleryDetail .owl-nav button.owl-next::before {
+    font-family: simple-line-icons;
+    content: "\e606";
+}
+
+#portfolioSliderWithThumbs #thumbGalleryDetail .owl-item > div {
+    background-size: cover !important;
+    width: 100%;
+    height: 600px;
+}
+
+#portfolioSliderWithThumbs #thumbGalleryThumbs {
+    height: 80px;
+}
+
+#portfolioSliderWithThumbs #thumbGalleryThumbs .owl-item.active-thumb {
+    opacity: 0.5;
+}
+
+#portfolioSliderWithThumbs #thumbGalleryThumbs .owl-item > div {
+    background-size: cover !important;
+    width: 100%;
+    height: 80px;
+}
+
+@media (max-width: 1200px) {
+    #portfolioSliderWithThumbs #thumbGalleryDetail {
+            height: 520px;
+    }
+    #portfolioSliderWithThumbs #thumbGalleryDetail .owl-item > div {
+            height: 520px;
+    }
+    #portfolioSliderWithThumbs #thumbGalleryThumbs {
+            height: 75px;
+    }
+    #portfolioSliderWithThumbs #thumbGalleryThumbs .owl-item > div {
+            height: 75px;
+    }
+}
+
+@media (max-width: 991px) {
+    #portfolioSliderWithThumbs #thumbGalleryDetail {
+            height: 390px;
+    }
+    #portfolioSliderWithThumbs #thumbGalleryDetail .owl-item > div {
+            height: 390px;
+    }
+    #portfolioSliderWithThumbs #thumbGalleryThumbs {
+            height: 65px;
+    }
+    #portfolioSliderWithThumbs #thumbGalleryThumbs .owl-item > div {
+            height: 65px;
+    }
+}
+
+@media (max-width: 767px) {
+    #portfolioSliderWithThumbs #thumbGalleryDetail {
+            height: 50vw;
+    }
+    #portfolioSliderWithThumbs #thumbGalleryDetail .owl-item > div {
+            height: 50vw;
+    }
+    #portfolioSliderWithThumbs #thumbGalleryThumbs {
+            height: 17vw;
+    }
+    #portfolioSliderWithThumbs #thumbGalleryThumbs .owl-item > div {
+            height: 17vw;
+    }
+}

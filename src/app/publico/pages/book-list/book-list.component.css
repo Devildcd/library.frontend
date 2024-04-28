@@ -1,0 +1,139 @@
+
+@font-face {
+  font-family: 'Kessel105Text-Book' format('truetype');
+  src: url('/assets/fonts/kessel-105-text-heavy-oblique.ttf');
+}
+
+a, h1, h2, h3, h4, h5, h6, p {
+  font-family: 'Kessel105Text-Book';
+}
+
+.example-card {
+    margin: 50px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    box-shadow: none;
+    /* flex: 1 0 30%; */
+  }
+
+.custom-image {
+    width: 295px;
+    height: 413px; 
+  }
+
+  .main {
+    width: 50%;
+    margin: 50px auto;
+}
+
+.my-pagination ::ng-deep .ngx-pagination .current {
+  background: #ac0904;
+}
+
+.input-group {
+  flex: 1; /* Hace que el grupo de entrada ocupe todo el espacio disponible en el contenedor */
+}
+
+.form-control {
+  flex: 1; /* Hace que el input ocupe todo el espacio disponible dentro del grupo de entrada */
+  max-width: 200px; /* Establece un ancho máximo para el input */
+}
+
+.example-card-title {
+  font-size: 14pt;
+}
+
+.example-card-content p {
+  font-size: 11pt;
+}
+
+/* Css de los Botones */
+.fill:hover,
+.fill:focus {
+  box-shadow: inset 0 0 0 2em var(--hover);
+}
+
+.pulse:hover,
+.pulse:focus {
+  -webkit-animation: pulse 1s;
+          animation: pulse 1s;
+  box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+.close:hover,
+.close:focus {
+  box-shadow: inset -3.5em 0 0 0 var(--hover), inset 3.5em 0 0 0 var(--hover);
+}
+
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  -webkit-transform: translateY(-0.25em);
+          transform: translateY(-0.25em);
+}
+
+.up:hover,
+.up:focus {
+  box-shadow: inset 0 -3.25em 0 0 var(--hover);
+}
+
+.slide:hover,
+.slide:focus {
+  box-shadow: inset 6.5em 0 0 0 var(--hover);
+}
+
+.offset {
+  box-shadow: 0.3em 0.3em 0 0 var(--color), inset 0.3em 0.3em 0 0 var(--color);
+}
+.offset:hover, .offset:focus {
+  box-shadow: 0 0 0 0 var(--hover), inset 6em 3.5em 0 0 var(--hover);
+}
+
+.fill {
+  --color: #a972cb;
+  --hover: #cb72aa;
+}
+
+.pulse {
+  --color: #ef6eae;
+  --hover: #ef8f6e;
+}
+
+.close {
+  --color: #ff7f82;
+  --hover: #ffdc7f;
+}
+
+.raise {
+  --color: #fdfcfb;
+  --hover: #080808;
+  
+}
+
+.up {
+  --color: #e4cb58;
+  --hover: #94e458;
+}
+
+.slide {
+  --color: #8fc866;
+  --hover: #66c887;
+}
+
+.offset {
+  --color: #c4c2c2;
+  --hover: #bdbbbb;
+}
+
+

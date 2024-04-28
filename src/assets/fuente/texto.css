@@ -1,0 +1,75 @@
+/*@charset "utf-8";*/
+
+
+/* CSS Document */
+
+
+/*fuente a emplear en la web kessel 105 text book*/
+
+@font-face {
+    font-family: 'Kessel105text-Book';
+    src: url('src/assets/fuente/KESSEL105/Kessel105Text-Book.ttf');
+    src: url('src/assets/fuente/KESSEL105/Kessel105Text-Book.eot');
+    /* IE9*/
+    src: url('src/assets/fuente/KESSEL105/Kessel105Text-Book.eot') format("embedded-opentype");
+    /* IE6-IE8 */
+    src: url('src/assets/fuente/KESSEL105/Kessel105Text-Book.woff') format("woff");
+    /* chrome、firefox */
+    src: url('src/assets/fuente/KESSEL105/Kessel105Text-Book.ttf') format("truetype");
+    /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    src: url('src/assets/fuente/KESSEL105/Kessel105Text-Book.svg') format("svg");
+    /* iOS 4.1- */
+}
+ 
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-family: 'Kessel105text-Book';
+}
+
+
+/*
+@font-face {
+    font-family: "Kessel105text-Book";
+    src: url(src/assets/fuente/KESSEL105/Kessel105Text-Book.ttf );
+    src: url(src/assets/fuente/KESSEL105/Kessel105Text-Book.eot);
+    /* IE9*/
+
+
+/*   src: url(src/assets/fuente/KESSEL105/Kessel105Text-Book.eot) format("embedded-opentype");
+    /* IE6-IE8 */
+
+
+/*  src: url(src/assets/fuente/KESSEL105/Kessel105Text-Book.woff) format("woff");
+    /* chrome、firefox */
+
+
+/*  src: url(src/assets/fuente/KESSEL105/Kessel105Text-Book.ttf) format("truetype");
+    /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+
+
+/*   src: url(src/assets/fuente/KESSEL105/Kessel105Text-Book.svg) format("svg");
+    /* iOS 4.1- */
+
+
+/*}
+
+.fuente {
+    font-family: "Kessel105text-Book" !important;
+    /* font-size:12px;*/
+
+
+/*   font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+    font-family: "Kessel105text-Book";
+}*/

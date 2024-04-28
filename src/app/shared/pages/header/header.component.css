@@ -1,0 +1,101 @@
+.header-shrink {
+    /* Define las propiedades de contracción del menú */
+    height: 60px; /* Ajusta la altura deseada */
+    transition: height 0.3s ease-in-out; /* Agrega una transición suave */
+  }
+  
+  .header-shrink .header-logo {
+    /* Ajusta los estilos del logo cuando el menú se contrae */
+    max-width: 120px; /* Ajusta el tamaño deseado */
+    transition: max-width 0.3s ease-in-out; /* Agrega una transición suave */
+  }
+
+
+/*  */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  padding-right: 280px;
+  transition: all 0.5s ease;
+  z-index: 999;
+  background-color: #000;
+  height: 100px;
+  /* border-bottom: 1px solid #ac0904; */
+}
+
+nav.shrunk {
+  height: 60px; /* Ajusta la altura según tus necesidades */
+  /* border-bottom: none; */
+}
+
+nav.shrunk .header-logo img {
+  max-width: 120px; /* Ajusta el tamaño deseado */
+  transition: max-width 0.9s ease; /* Agrega una transición suave */
+}
+
+nav .nav-content {
+  height: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: height 0.9s ease;
+  padding-left: 20px; /* Agrega un margen izquierdo al contenedor del menú */
+  padding-right: 20px; /* Agrega un margen derecho al contenedor del menú */
+}
+
+nav .header-logo {
+  display: flex;
+  align-items: center;
+}
+
+nav .logo a {
+  font-weight: 500;
+  font-size: 35px;
+  color: #f7f8f8;
+  transition: all 0.9s ease;
+}
+
+nav.shrunk .logo a {
+  font-size: 25px; /* Ajusta el tamaño de fuente según tus necesidades */
+}
+
+.nav-content .nav-links {
+  display: flex;
+}
+
+.nav-content .nav-links li {
+  list-style: none;
+  margin: 0 8px;
+}
+
+
+nav .header-logo img {
+  transition: max-width 0.9s ease; /* Agrega una transición suave */
+}
+
+/* .logo-shrink {
+ visibility: visible;
+  max-width: 50px; 
+  transition: max-width 0.3s ease-in-out; 
+} */
+/* 
+.logo {
+  display: none;
+  visibility: hidden;
+} */
+
+
+

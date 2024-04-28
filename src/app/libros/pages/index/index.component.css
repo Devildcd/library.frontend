@@ -1,0 +1,152 @@
+.circle-container {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid rgb(209, 208, 208);
+    transition: box-shadow 0.3s;
+  }
+
+  .circle-container:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Cambia la sombra al pasar el ratón sobre el div */
+  }
+  
+  .circle-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .btn {
+    margin-right: 5px;
+  }
+
+  .oculto {
+    display: none;
+}
+
+.fa-triangle {
+  color: rgb(245, 161, 4);
+}
+
+.fa-triangle:hover {
+  color: rgb(248, 202, 117);
+}
+
+.fa-check {
+  color: chartreuse;
+}
+
+.alerta {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  color: #000;
+  padding: 40px;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.mensaje {
+  margin-right: 10px;
+}
+
+.cerrar {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.custom-buttonn {
+  width: 80px; /* Ajusta el tamaño deseado para los botones */
+}
+
+.custom-button {
+  background-color:  #ac0904;
+}
+
+.anadir-custom-button {
+  background-color:  #ac0904;
+  border-color: #ac0904;
+  color: white;
+  font-family:  sans-serif;
+}
+
+.anadir-custom-button:hover {
+  background-color:  #cf3c3c;
+  border-color: #cf3c3c;
+  color: white;
+}
+
+.custom-button:hover {
+  background-color: #cf3c3c;
+}
+
+.btn-success {
+  background-color: rgb(54, 54, 54);
+  border-color: rgb(54, 54, 54);
+}
+
+.btn-success:hover {
+  background-color: rgb(164, 167, 164);
+  border-color: rgb(164, 167, 164);
+}
+
+.btn-primary {
+  background-color:  #ac0904;
+  border-color: #ac0904;
+}
+
+.btn-primary:hover {
+  background-color: #cf3c3c;
+  border-color: #cf3c3c;
+}
+
+.my-pagination ::ng-deep .ngx-pagination .current {
+  background: #ac0904;
+}
+
+.fa-user-circle {
+  font-size: 30px;
+  color: rgb(87, 87, 87);
+}
+
+.fa-user-circle:hover {
+  color: rgb(22, 22, 22);
+}
+
+.dropdown-toggle::after {
+  color: rgb(87, 87, 87);
+}
+
+.fa-user {
+  color: rgb(87, 87, 87);
+}
+
+.fa-user:hover {
+  color: rgb(22, 22, 22);
+}
+
+.custom-icon {
+  color: rgb(87, 87, 87);
+}
+
+.custom-icon:hover {
+  color: rgb(22, 22, 22);
+}
+
+.fa-times {
+  color: rgb(87, 87, 87);
+}
+
+.fa-times:hover {
+  color: rgb(22, 22, 22);
+}
+
+

@@ -1,0 +1,29 @@
+.mat-custom-message{
+    background-color:#ac0904;
+    color:rgb(253, 251, 251);
+    margin-top: 10px;
+}
+
+.custom-button {
+    background-color:  #ac0904;
+    border-color: #ac0904;
+    color: white;
+    font-family:  sans-serif;
+}
+
+.custom-button:hover {
+    background-color:  #cf3c3c;
+    border-color: #cf3c3c;
+    color: white;
+}
+
+.btn-danger {
+    background-color: rgb(54, 54, 54);
+    border-color: rgb(54, 54, 54);
+}
+
+.btn-danger:hover {
+    background-color: rgb(164, 167, 164);
+    border-color: rgb(164, 167, 164);
+}
+

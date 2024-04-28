@@ -1,0 +1,63 @@
+
+<section class="section section-no-border pt-0 pb-5 m-0 callout-dark heading-title callout-rojo" style="background-color: #ac0904">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5 mx-auto" style="margin-bottom: 40px">   
+        </div>
+    </div>
+    </div>
+</section>
+
+<div *ngIf="!loading" class="row container-fluid justify-content-center p-5">
+  <div *ngIf="loading" class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+
+  <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+    <a *ngIf="libro?.principal" [routerLink]="['/biblioteca/libro', libro.id]">
+      <img class="custom-image img-fluid offset raise" [src]="libro.imagen?.imagen | img" style="object-fit: cover;">
+    </a>
+    <img *ngIf="!libro.principal" mat-card-lg-image class="custom-image img-fluid offset raise"
+      [src]="libro.imagen?.imagen | img" style="object-fit: cover;">
+  </div>
+
+  <div class="col-lg-5 col-md-6 col-sm-6 col-12" style="margin-left: 20px; margin-top: 10px;">
+    <div>
+        <h2 style="overflow: hidden; width: 100%; padding: 10px;text-align: justify;  font-size: 14pt; color: #ac0904; margin-top: 10px;">
+            {{ libro.nombre }}
+        </h2>
+        <p style="padding: 0px 10px 0px 10px; margin-top: -20px;  text-align: justify;  font-size: 11pt; color: #ac0904;">Autor: {{ libro.autor
+            }}</p>
+        <p style="padding: 0px 10px 0px 10px; margin-top: -10px;  text-align: justify;  font-size: 11pt; color: #ac0904;">
+            ISBN: {{ libro.codigo }}</p>
+        <p style="padding: 0px 10px 0px 10px; margin-top: -10px; text-align: justify;  font-size: 11pt; color: #ac0904;">
+            Formato: {{ libro.tipo }}</p>
+    
+        <p
+            style="overflow: hidden; width: 100%; padding: 0px 10px 10px 10px;text-align: justify;  font-size: 11pt; overflow: auto; max-height: 245px;">
+            {{ libro.descripcion }}</p>
+    </div>
+
+      <div class="button-container" style="display: flex;  padding: 0px 10px 0px 10px; margin-top: 18px;">
+              
+              
+        <button *ngIf="libro.descargable && libro.documento!.doc" (click)="downloadBook()" mat-raised-button class="book-button text-white">
+            <span class="button-text">Descargar</span> <i class="fa fa-download button-icon" aria-hidden="true"></i>
+          </button>
+          
+          <!-- <button *ngIf="libro.documento?.doc" (click)="openDialog()" mat-raised-button class="book-button text-white">
+            <span class="button-text">Leer</span> <i class="fa fa-eye button-icon" aria-hidden="true"></i>
+          </button> -->
+
+          <a *ngIf="libro.url"  [href]=" libro.url" target="_blank">
+            <p style="font-size: 11pt; color: #ac0904;">{{ libro.url }}</p>
+          </a>
+         
+          <div *ngIf="libro.ubicacion" style="text-align: justify; font-size: 11pt; overflow: auto; max-height: 200px;">
+            <span><p style="font-size: 11pt; color: #ac0904;">Ubicación:</p><p style="font-size: 11pt;">{{ libro.ubicacion }}</p></span>
+          </div>
+          
+      </div>
+  </div>
+
+</div>

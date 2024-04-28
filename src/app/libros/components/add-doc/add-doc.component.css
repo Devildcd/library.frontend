@@ -1,0 +1,68 @@
+.ocultoDoc {
+    display: none;
+}
+
+.custom-header {
+    background-color: #ac0904;;
+    color: white;
+}
+
+.fondo {
+    background-color: black;
+}
+
+.btn {
+    font-size: 15px;
+    width: 50px;
+}
+
+.fa.fa-file {
+    font-size: 40px; /* Ajusta el tamaño del icono según tus necesidades */
+    color: rgb(107, 106, 106); /* Establece el color del icono como gris */
+    animation: blink-shadow 3s infinite; /* Establece la animación de parpadeo con sombra */
+  }
+  
+  @keyframes blink-shadow {
+    0% {
+      opacity: 0.2;
+      text-shadow: none; /* Sin sombra */
+    }
+    50% {
+      opacity: 1;
+      text-shadow: 0 0 5px rgb(100, 105, 107); /* Agrega una sombra gris */
+    }
+    100% {
+      opacity: 0.2;
+      text-shadow: none; /* Sin sombra */
+    }
+  }
+
+  .modal {
+    background-color: rgba(0, 0, 0, 0.8); /* Ajusta el valor de alfa (0.8) para hacerlo más oscuro o más claro según tus necesidades */
+  }
+
+  .modal-content {
+    background-color: white; /* Ajusta el color de fondo del contenido del modal si es necesario */
+  }
+
+  .modal-title {
+   color: rgb(100, 105, 107);
+  }
+
+  .modal-body text-center img {
+    width: 100px; /* Ajusta el ancho de la vista previa a 100px */
+  }
+
+  .fa.fa-check-circle {
+    font-size: 50px;
+    color: rgb(97, 214, 18);
+  }
+
+  .fa.fa-times-circle {
+    font-size: 50px;
+    color: rgb(248, 66, 66);
+  }
+
+  .custom-button {
+    background-color:  #ac0904;
+  }

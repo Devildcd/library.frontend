@@ -1,0 +1,41 @@
+
+<div class="fondo animated fadeIn" [ngClass]="modalService.oculto">
+
+<div class="modal" style="display: block;" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div *ngIf="modalService.errorMensaje" class="alert alert-danger d-flex align-items-center" role="alert">
+        <i class="fa fa-times-circle" aria-hidden="true"></i>
+        <div>
+          <span style="font-size: 20px; color: rgb(247, 62, 49);">{{ modalService.errorMensaje }}</span>
+        </div>
+      </div>
+
+      <div *ngIf="modalService.validFile" class="alert alert-danger d-flex align-items-center" role="alert">
+        <i class="fa fa-times-circle" aria-hidden="true"></i>
+        <div>
+          <span style="font-size: 20px; color: rgb(247, 62, 49);">{{modalService.validFile}}</span>
+        </div>
+      </div>
+
+      <div class="modal-header">
+        <h1 class="modal-title">Anexar imagen</h1>
+        <i class="fa fa-image" aria-hidden="true"></i>
+      </div>
+      <div class="modal-body text-center" >
+        <input type="file" accept="'.jpg', '.jpeg', '.png', '.gif', '.bmp', '.svg', '.tiff', '.tif', '.webp', '.ico'*" (change)="onFileSelected($event)">
+        <div *ngIf="modalService.previewImg" style="margin-top: 5px;">
+          <img [src]="modalService.previewImg" alt="Vista previa de la imagen" width="200px"  id="imagenLibro">
+        </div>
+        <input type="hidden" [value]="modalService.selectedLibroId$">
+      </div>
+      <div class="modal-footer">
+        <button type="button" (click)="modalService.ocultarModal()" class="btn btn-secondary custom-button"><i class="fa fa-times" aria-hidden="true"></i></button>
+        <button type="button" (click)="saveImage()" [disabled]="!modalService.previewImg" class="btn btn-primary "><i class="fa fa-check" aria-hidden="true"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>

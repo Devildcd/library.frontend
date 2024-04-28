@@ -1,0 +1,109 @@
+
+<div class="card card-default">
+
+    <div class="card-header">
+        <span class="card-title">Crear Libro</span>
+    </div>
+    <div class="card-body">
+
+        <form [formGroup]="formCreate">
+
+            <div class="mb-3 row ">
+                <label class="clo-sm-3 col-form-label">Título</label>
+                <div class="col-sm-12">
+                    <input type="text" class="form-control" formControlName="nombre" placeholder="...">
+                    <span class="form-text text-danger" *ngIf = "submitted && campoValido('nombre')">
+                        *campo requerido
+                    </span>
+                </div>
+            </div>
+
+            <div class="mb-3 row ">
+                <label class="clo-sm-3 col-form-label">Autor</label>
+                <div class="col-sm-12">
+                    <input type="text" class="form-control" formControlName="autor" placeholder="...">
+                    <span class="form-text text-danger" *ngIf = "submitted && campoValido('autor')">
+                        *campo requerido
+                    </span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2">
+                  <label class="clo-sm-3 col-form-label">ISBN</label>
+                  <div class="col-sm-12">
+                    <input type="text" class="form-control" formControlName="codigo" placeholder="...">
+                    <span class="form-text text-danger" *ngIf="submitted && campoValido('codigo')">
+                      *campo requerido
+                    </span>
+                  </div>
+                </div>
+                <div class="col-md-2">
+                  <label class="clo-sm-3 col-form-label">Formato</label>
+                  <div class="col-sm-12">
+                    <select class="form-select" aria-label="Default select example" formControlName="tipo">
+                      <option [value]="'digital'">Digital</option>
+                      <option [value]="'físico'">Físico</option>
+                      <option [value]="'externo'">Externo</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-md-2" style="margin-top: 50px;">
+                    <div class="d-flex align-items-center">
+                      <input type="checkbox" formControlName="principal" class="me-2">Principal
+                    </div>
+                  </div>
+
+                <div class="col-md-2" style="margin-top: 50px;">
+                  <div class="d-flex align-items-center mb-2" *ngIf="formCreate.get('tipo')?.value === 'digital'">
+                    <input type="checkbox" formControlName="descargable" class="me-2">Descargable
+                  </div>
+                </div>
+                
+            </div>
+
+            <div class="mb-3 row" *ngIf="formCreate.get('tipo')?.value === 'físico'">
+                <label class="clo-sm-3 col-form-label">Ubicación</label>
+                <div class="col-sm-12">
+                  <textarea class="form-control" formControlName="ubicacion" rows="1" *ngIf="formCreate.get('tipo')?.value === 'físico'" required></textarea>
+                  <span class="form-text text-danger" *ngIf = "submitted && campoValido('ubicacion')">
+                    *el campo es requerido y no debe exceder los 100 caracteres
+                </span>
+                </div>
+              </div>
+
+            <div class="mb-3 row" *ngIf="formCreate.get('tipo')?.value === 'externo'">
+                <label class="clo-sm-3 col-form-label">Url</label>
+                <div class="col-sm-12">
+                    <input type="url" class="form-control" formControlName="url" placeholder="http(s)://www.ejemplo.com" *ngIf="formCreate.get('tipo')?.value === 'externo'" required>
+                    <span class="form-text text-danger" *ngIf = "submitted && campoValido('url')">
+                        *campo requerido
+                    </span>
+                </div>
+            </div>
+
+            <div class="mb-3 row ">
+                <label class="clo-sm-3 col-form-label">Descripción</label>
+                <div class="col-sm-12">
+                    <textarea class="form-control" formControlName="descripcion" rows="3"></textarea>
+                    <span class="form-text text-danger" *ngIf = "submitted && campoValido('descripcion')">
+                        *campo requerido
+                    </span>
+                </div>
+            </div>   
+
+            <div class="box-footer mt20">
+                <button type="submit" (click)="save()" class="btn  custom-button">Aceptar</button>
+                <a [routerLink]="['manager/libros']">
+                    <button class="btn btn-danger" style="margin-left: 5px;">Volver</button>
+                </a>
+
+            </div>
+        </form>
+
+    </div>
+</div>
+
+
+
